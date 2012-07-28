@@ -1,0 +1,15 @@
+@(albums: Seq[model.Album])
+
+@main("Discography") {
+    
+    <h1>Discography</h1>
+    <ul>
+    @albums.map { album =>
+        <li class="album">
+            <h3><a href="@album.id/@album.seoTitle">@album.title</a></h3>
+            <img src="@album.smallArtUrl"/>
+        </li>
+    }
+    </ul>
+    
+}

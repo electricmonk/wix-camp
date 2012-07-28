@@ -1,0 +1,20 @@
+@(album: model.Album)
+
+@main(album.title) {
+    
+    <h1>@album.title</h1>
+    <img src="@album.largeArtUrl"/>
+    <div class="about">@Html(album.about)</div>
+    <ul>
+    @album.tracks.map { track =>
+        <li class="track">
+            <span class="track">@track.number. @track.title</span>
+            <audio controls="controls">
+                <source src="@track.streamingUrl" type="audio/mpeg" />
+            </audio>
+        </li>
+    }
+    </ul>
+    <pre class="credits">@Html(album.credits)</pre>
+
+}

@@ -14,3 +14,11 @@ tmp
 test-result
 eclipse
 server.pid
+=======
+logs
+project/project
+project/target
+target
+tmp
+.history
+dist
