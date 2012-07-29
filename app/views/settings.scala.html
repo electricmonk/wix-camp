@@ -1,0 +1,17 @@
+@(settingsForm: Form[Long])
+
+@import helper._
+
+@main("Settings") {
+
+    <h1>Bandcamp Settings</h1>
+
+    @form(routes.SettingsController.save) {
+
+        @inputText(settingsForm("bandId"))
+
+        <input type="submit" value="Save">
+
+    }
+
+}
